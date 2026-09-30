@@ -1,4 +1,4 @@
-    /* =========================================================
+/* =========================================================
     INSTITUTO ADOTA PET
     MÓDULO DE INTERFACE
     ========================================================= */
@@ -197,6 +197,10 @@
         }
 
 
+        modal.hidden =
+            false;
+
+
         modal.style.display =
             "flex";
 
@@ -235,6 +239,10 @@
             "none";
 
 
+        modal.hidden =
+            true;
+
+
         modal.setAttribute(
             "aria-hidden",
             "true"
@@ -263,6 +271,10 @@
         if (!modal) {
             return;
         }
+
+
+        modal.hidden =
+            false;
 
 
         modal.style.display =
@@ -301,6 +313,10 @@
 
         modal.style.display =
             "none";
+
+
+        modal.hidden =
+            true;
 
 
         modal.setAttribute(
@@ -357,6 +373,68 @@
 
 
     /* =========================================================
+    FECHAR MODAL COM CLIQUE (X, FUNDO E BOTÃO FECHAR)
+    ========================================================= */
+
+    function ativarFechamentoModal() {
+
+        if (
+            window.fechamentoModalInicializado
+        ) {
+            return;
+        }
+
+
+        /*
+        * Um único listener no document funciona mesmo
+        * quando a SPA substitui o conteúdo do #app.
+        */
+
+        document.addEventListener(
+            "click",
+            (evento) => {
+
+                const gatilho =
+                    evento.target.closest(
+                        "[data-modal-close]"
+                    );
+
+
+                if (!gatilho) {
+                    return;
+                }
+
+
+                const modal =
+                    gatilho.closest(
+                        ".modal"
+                    );
+
+
+                if (!modal) {
+                    return;
+                }
+
+
+                if (
+                    modal.id === "successModal"
+                ) {
+                    fecharModalSucesso();
+                } else {
+                    fecharModal();
+                }
+
+            }
+        );
+
+
+        window.fechamentoModalInicializado =
+            true;
+
+    }
+
+
+    /* =========================================================
     INTERFACE
     ========================================================= */
 
@@ -371,6 +449,8 @@
         ) {
 
             ativarTeclaEscape();
+
+            ativarFechamentoModal();
 
             return;
 
@@ -403,6 +483,8 @@
 
 
         ativarTeclaEscape();
+
+        ativarFechamentoModal();
 
 
         window.interfaceInicializada =
