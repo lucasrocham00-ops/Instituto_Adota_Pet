@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Conheça os projetos do Instituto Adota Pet e descubra como contribuir com a proteção e o cuidado dos animais."
+    >
+
+    <title>Projetos | Instituto Adota Pet</title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/estilo.css"
+    >
+
+    <!-- Biblioteca externa AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+
+        <div class="header-brand">
+
+            <h1>
+                Instituto Adota Pet
+            </h1>
+
+
+            <p>
+                Todo pet merece uma segunda chance.
+            </p>
+
+        </div>
+
+
+
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+
+        <label
+            for="menu-toggle"
+            class="menu-icon"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </label>
+
+
+
+        <nav aria-label="Navegação principal">
+
+
+            <a
+                href="index.html"
+                data-route
+            >
+                Início
+            </a>
+
+
+
+            <div class="dropdown">
+
+
+                <a
+                    href="projetos.html"
+                    data-route
+                >
+                    Projetos
+                </a>
+
+
+
+                <div class="dropdown-menu">
+
+                    <a
+                        href="projetos.html#doacao"
+                        data-route
+                    >
+                        Doação
+                    </a>
+
+
+                    <a
+                        href="projetos.html#voluntariado"
+                        data-route
+                    >
+                        Voluntariado
+                    </a>
+
+
+                    <a
+                        href="projetos.html#adocao"
+                        data-route
+                    >
+                        Adoção responsável
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <a
+                href="cadastro.html"
+                data-route
+            >
+                Cadastro
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main id="app">
+
+
+    <!-- =====================================================
+         CABEÇALHO DA PÁGINA
+         ===================================================== -->
+
+    <section
+        class="page-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="container">
+
+            <p class="eyebrow">
+                NOSSOS PROJETOS
+            </p>
+
+
+            <h2>
+                Existem várias maneiras de ajudar.
+            </h2>
+
+
+            <p>
+                Conheça as formas de participação do Instituto Adota Pet
+                e escolha aquela que mais combina com você.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJETOS
+         ===================================================== -->
+
+    <section class="content-section">
+
+
+        <div
+            class="section-heading centered"
+            data-aos="fade-up"
+        >
+
+            <p class="eyebrow">
+                COMO AJUDAR
+            </p>
+
+
+            <h2>
+                Faça parte dessa causa.
+            </h2>
+
+
+            <p>
+                A proteção animal depende de atitudes responsáveis,
+                participação e cuidado com os animais.
+            </p>
+
+        </div>
+
+
+
+        <div
+            id="lista-projetos"
+            class="projects-list"
+        >
+        </div>
+
+
+
+        <!-- =================================================
+             TEMPLATE DOS PROJETOS
+             ================================================= -->
+
+        <template id="projeto-template">
+
+
+            <section
+                class="content-section"
+                data-aos="fade-up"
+            >
+
+                <div class="two-column">
+
+
+                    <div class="feature-image">
+
+                        <img
+                            src=""
+                            alt=""
+                        >
+
+                    </div>
+
+
+
+                    <div class="feature-content">
+
+                        <p class="eyebrow">
+                            PROJETO
+                        </p>
+
+
+                        <p class="card-number">
+                            01
+                        </p>
+
+
+                        <h2>
+                            Título do projeto
+                        </h2>
+
+
+                        <span class="badge badge-neutral">
+                            Categoria
+                        </span>
+
+
+                        <p class="projeto-descricao">
+                            Descrição do projeto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </template>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DOAÇÃO - CONTEÚDO COMPLEMENTAR
+         ===================================================== -->
+
+    <section
+        id="doacao-detalhes"
+        class="content-section"
+        data-aos="fade-up"
+    >
+
+        <div class="two-column">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    DOAÇÃO
+                </p>
+
+
+                <h2>
+                    Ajude por meio de doações
+                </h2>
+
+
+                <p>
+                    As doações contribuem para ações de proteção,
+                    cuidado e bem-estar dos animais.
+                </p>
+
+            </div>
+
+
+
+            <div class="highlight-box">
+
+                <strong>
+                    Sua contribuição importa
+                </strong>
+
+
+                <p>
+                    Cada contribuição pode ajudar nas ações
+                    relacionadas à proteção e ao cuidado dos animais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VOLUNTARIADO - CONTEÚDO COMPLEMENTAR
+         ===================================================== -->
+
+    <section
+        id="voluntariado-detalhes"
+        class="content-section"
+        data-aos="fade-up"
+    >
+
+        <div class="two-column">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    VOLUNTARIADO
+                </p>
+
+
+                <h2>
+                    Participe como voluntário
+                </h2>
+
+
+                <p>
+                    O voluntariado permite contribuir com ações
+                    relacionadas à proteção e ao cuidado dos animais.
+                </p>
+
+            </div>
+
+
+
+            <div class="highlight-box">
+
+                <strong>
+                    Faça parte da equipe
+                </strong>
+
+
+                <p>
+                    Pessoas interessadas podem participar de ações
+                    voltadas à proteção e ao bem-estar animal.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ADOÇÃO - CONTEÚDO COMPLEMENTAR
+         ===================================================== -->
+
+    <section
+        id="adocao-detalhes"
+        class="content-section"
+        data-aos="fade-up"
+    >
+
+        <div class="two-column">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    ADOÇÃO RESPONSÁVEL
+                </p>
+
+
+                <h2>
+                    Dê uma segunda chance
+                </h2>
+
+
+                <p>
+                    A adoção responsável representa um compromisso
+                    de cuidado, respeito e proteção durante toda
+                    a vida do animal.
+                </p>
+
+            </div>
+
+
+
+            <div class="highlight-box">
+
+                <strong>
+                    Adotar é assumir uma responsabilidade
+                </strong>
+
+
+                <p>
+                    A adoção deve ser consciente e considerar
+                    as necessidades do animal durante toda a sua vida.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CHAMADA FINAL
+         ===================================================== -->
+
+    <section
+        class="content-section"
+        data-aos="fade-up"
+    >
+
+        <div class="section-heading centered">
+
+            <p class="eyebrow">
+                PARTICIPE
+            </p>
+
+
+            <h2>
+                Quer fazer parte dessa causa?
+            </h2>
+
+
+            <p>
+                Cadastre-se para conhecer as formas de participação
+                no Instituto Adota Pet.
+            </p>
+
+
+            <div class="hero-actions">
+
+
+                <a
+                    href="cadastro.html"
+                    data-route
+                >
+                    Quero participar
+                </a>
+
+
+                <a
+                    class="button-secondary"
+                    href="index.html"
+                    data-route
+                >
+                    Voltar para início
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     RODAPÉ
+     ========================================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Instituto Adota Pet. Todos os direitos reservados.
+    </p>
+
+
+    <p>
+        Proteção, cuidado e respeito aos animais.
+    </p>
+
+</footer>
+
+
+
+<!-- Biblioteca externa AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- JavaScript principal -->
+<script
+    type="module"
+    src="../JS/app.js"
+></script>
+
+
+</body>
+
+</html>
