@@ -7,6 +7,10 @@ import {
     atualizarAOS
 } from "./interface.js";
 
+import gatoCarinho from "../IMAGENS/gato-carinho.jpg";
+import passeioCaes from "../IMAGENS/passeio-caes.jpg";
+import familiaDoacao from "../IMAGENS/familia-doacao.jpg";
+
 
 /* =========================================================
    DADOS DOS PROJETOS
@@ -22,7 +26,7 @@ export const projetos = [
         classeBadge: "badge-neutral",
         descricao:
             "As doações ajudam a manter ações de proteção, alimentação, cuidados e bem-estar dos animais.",
-        imagem: "../IMAGENS/gato-carinho.jpg",
+        imagem: gatoCarinho,
         alt: "Gato recebendo carinho e atenção"
     },
 
@@ -34,7 +38,7 @@ export const projetos = [
         classeBadge: "badge-warning",
         descricao:
             "O voluntariado permite que pessoas contribuam com ações relacionadas à proteção e ao cuidado dos animais.",
-        imagem: "../IMAGENS/passeio-caes.jpg",
+        imagem: passeioCaes,
         alt: "Cães participando de uma atividade ao ar livre"
     },
 
@@ -46,7 +50,7 @@ export const projetos = [
         classeBadge: "badge-success",
         descricao:
             "Adotar significa assumir o compromisso de oferecer cuidado, segurança, alimentação e carinho durante toda a vida do animal.",
-        imagem: "../IMAGENS/familia-doacao.jpg",
+        imagem: familiaDoacao,
         alt: "Família relacionada à adoção responsável de animais"
     }
 

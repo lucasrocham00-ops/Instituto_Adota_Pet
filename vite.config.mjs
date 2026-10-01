@@ -2,7 +2,14 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  root: "HTML",
+  root: ".",
+
+  server: {
+    fs: {
+      allow: [".."]
+    }
+  },
+
   build: {
     rollupOptions: {
       input: {
@@ -11,7 +18,7 @@ export default defineConfig({
         cadastro: resolve(__dirname, "HTML/cadastro.html")
       }
     },
-    outDir: "../dist",
+    outDir: "dist",
     emptyOutDir: true
   }
 });
