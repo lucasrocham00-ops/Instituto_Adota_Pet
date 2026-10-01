@@ -2061,6 +2061,62 @@ calc(100% - 30px);
 ACESSIBILIDADE
 ========================================================= */
 
+/* Link para pular diretamente ao conteúdo principal */
+
+.skip-link {
+
+position: fixed;
+
+top: 12px;
+
+left: 12px;
+
+z-index: 9999;
+
+padding: 12px 18px;
+
+background-color:
+var(--primary-900);
+
+color:
+var(--white);
+
+border:
+2px solid var(--secondary-100);
+
+border-radius:
+var(--radius-small);
+
+font-size: 15px;
+
+font-weight: 700;
+
+text-decoration: none;
+
+box-shadow:
+var(--shadow-medium);
+
+transform:
+translateY(-150%);
+
+transition:
+transform 0.2s ease;
+}
+
+.skip-link:focus {
+
+transform:
+translateY(0);
+}
+
+.skip-link:focus-visible {
+
+outline:
+3px solid var(--secondary-100);
+
+outline-offset: 3px;
+}
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -2082,29 +2138,484 @@ var(--secondary-100);
 color:
 var(--primary-900);
 }
-
 /* =========================================================
-REDUÇÃO DE MOVIMENTO
+MODO ESCURO
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-color-scheme: dark) {
 
 html {
-scroll-behavior: auto;
+
+background-color:
+#121814;
+
+color-scheme:
+dark;
 }
 
-*,
-*::before,
-*::after {
+body {
 
-scroll-behavior:
-auto !important;
+background-color:
+#121814;
 
-transition:
-none !important;
+color:
+#e8eee9;
+}
 
-animation:
-none !important;
+/* =========================
+TEXTOS
+========================= */
+
+.section-heading > p:last-child,
+.hero-content > p:not(.eyebrow),
+.two-column > div:first-child p,
+.highlight-box p,
+.card-content p:not(.card-number),
+.feature-content p:not(.eyebrow),
+.project-content p,
+.page-hero p:not(.eyebrow),
+.care-content p:not(.eyebrow),
+.closing-content > p:not(.eyebrow) {
+
+color:
+#c5d0c8;
+}
+
+h2,
+h3 {
+
+color:
+#e5eee7;
+}
+
+label {
+
+color:
+#dce6df;
+}
+
+/* =========================
+LINK SECUNDÁRIO
+========================= */
+
+.button-secondary {
+
+color:
+#e5eee7 !important;
+
+border-color:
+#6f8075;
+}
+
+.button-secondary:hover {
+
+background-color:
+#24342b !important;
+}
+
+/* =========================
+DROPDOWN
+========================= */
+
+.dropdown-menu {
+
+background-color:
+#1c2721;
+}
+
+.dropdown-menu a {
+
+color:
+#e5eee7;
+}
+
+.dropdown-menu a:hover {
+
+background-color:
+#294235;
+
+color:
+#ffffff;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+
+background:
+linear-gradient(
+135deg,
+#20372a,
+#17221b
+);
+
+border-color:
+#35513f;
+}
+
+.hero-content > p:not(.eyebrow) {
+
+color:
+#c5d0c8;
+}
+
+/* =========================
+DUAS COLUNAS
+========================= */
+
+.highlight-box {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+
+border-left-color:
+#d9a42c;
+}
+
+.highlight-box strong {
+
+color:
+#e5eee7;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.image-card {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+}
+
+/* =========================
+FEATURE
+========================= */
+
+.feature-section {
+
+background-color:
+#1c3327;
+}
+
+.feature-content h2 {
+
+color:
+#e5eee7;
+}
+
+.feature-content .eyebrow {
+
+color:
+#f0c45d;
+}
+
+/* =========================
+HERO DA PÁGINA
+========================= */
+
+.page-hero {
+
+background:
+linear-gradient(
+135deg,
+#20372a,
+#17221b
+);
+
+border-color:
+#35513f;
+}
+
+/* =========================
+PROJETOS
+========================= */
+
+.project-feature {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+}
+
+#lista-projetos .feature-content h2 {
+
+color:
+#e5eee7;
+}
+
+#lista-projetos .feature-content .projeto-descricao {
+
+color:
+#c5d0c8;
+}
+
+/* =========================
+CUIDADOS
+========================= */
+
+.care-section {
+
+background:
+linear-gradient(
+135deg,
+#20372a,
+#18221c
+);
+
+border-color:
+#35513f;
+}
+
+/* =========================
+CHAMADA FINAL
+========================= */
+
+.closing-section {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+}
+
+/* =========================
+FORMULÁRIO
+========================= */
+
+form {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+}
+
+fieldset {
+
+background-color:
+#17211b;
+
+border-color:
+#3a4b40;
+}
+
+legend {
+
+color:
+#e5eee7;
+}
+
+input,
+select,
+textarea {
+
+background-color:
+#18231d;
+
+color:
+#e8eee9;
+
+border-color:
+#526259;
+}
+
+input::placeholder,
+textarea::placeholder {
+
+color:
+#9eaaa1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+border-color:
+#72b886;
+
+box-shadow:
+0 0 0 3px
+rgba(114, 184, 134, 0.20);
+}
+
+/* =========================
+BOTÕES
+========================= */
+
+.reset-button {
+
+background-color:
+#344139;
+
+color:
+#e5eee7;
+}
+
+.reset-button:hover {
+
+background-color:
+#455348;
+}
+
+/* =========================
+VALIDAÇÃO
+========================= */
+
+.mensagem-erro {
+
+color:
+#ff8f82;
+}
+
+/* =========================
+BADGES
+========================= */
+
+.badge-success {
+
+background-color:
+#294235;
+
+color:
+#d9eadc;
+}
+
+.badge-warning {
+
+background-color:
+#4a3b1d;
+
+color:
+#f2d276;
+}
+
+.badge-neutral {
+
+background-color:
+#344139;
+
+color:
+#d7e0da;
+}
+
+/* =========================
+ALERTAS
+========================= */
+
+.alert-success {
+
+background-color:
+#294235;
+
+border-color:
+#41604b;
+
+color:
+#e4eee7;
+}
+
+/* =========================
+TOAST
+========================= */
+
+.toast {
+
+background-color:
+#1c2721;
+
+border-color:
+#35453b;
+}
+
+.toast-content strong {
+
+color:
+#e5eee7;
+}
+
+.toast-content p {
+
+color:
+#b7c3bb;
+}
+
+/* =========================
+MODAL
+========================= */
+
+.modal-overlay {
+
+background-color:
+rgba(0, 0, 0, 0.72);
+}
+
+.modal-dialog {
+
+background-color:
+#1c2721;
+}
+
+.modal-header {
+
+border-bottom-color:
+#35453b;
+}
+
+.modal-header h2 {
+
+color:
+#e5eee7;
+}
+
+.modal-close {
+
+color:
+#d5dfd8;
+}
+
+.modal-close:hover {
+
+background:
+#344139;
+}
+
+/* =========================
+LINK DE ACESSIBILIDADE
+========================= */
+
+.skip-link {
+
+background-color:
+#f6d77d;
+
+color:
+#142219;
+}
+
+/* =========================
+SELEÇÃO DE TEXTO
+========================= */
+
+::selection {
+
+background-color:
+#f6d77d;
+
+color:
+#142219;
 }
 
 }
